@@ -53,7 +53,7 @@ class CircularArray {
         }
 
         if (index == -1) {
-            System.out.println("Value not found: " + value);
+            System.out.println("Value " + value + " not found.");
             return;
         }
 
@@ -96,35 +96,16 @@ class CircularArray {
         System.out.print("Enter array size: ");
         int size = sc.nextInt();
         CircularArray ca = new CircularArray(size);
-
-        while (true) {
-            System.out.println("\n1. Add\n2. Remove\n3. Display\n4. Search\n5. Exit");
-            System.out.print("Choose option: ");
-            int choice = sc.nextInt();
-
-            switch (choice) {
-                case 1:
-                    System.out.print("Enter value to add: ");
-                    ca.add(sc.nextInt());
-                    break;
-                case 2:
-                    System.out.print("Enter value to remove: ");
-                    ca.remove(sc.nextInt());
-                    break;
-                case 3:
-                    ca.display();
-                    break;
-                case 4:
-                    System.out.print("Enter value to search: ");
-                    ca.search(sc.nextInt());
-                    break;
-                case 5:
-                    System.out.println("Exiting...");
-                    sc.close();
-                    return;
-                default:
-                    System.out.println("Invalid choice");
-            }
+        // addition
+        ca.add(20);
+        ca.add(22);
+        // duplicate test
+        ca.add(20);
+        // removing
+        ca.remove(1);
+        // searching
+        ca.search(2);
         }
     }
-}
+
+
